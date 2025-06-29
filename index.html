@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The best KI-Tools of 2025</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Leichter grauer Hintergrund */
+        }
+        /* Dark mode styles */
+        .dark body {
+            background-color: #1a202c; /* Dunkler Hintergrund */
+            color: #e2e8f0; /* Helle Textfarbe */
+        }
+        .dark .bg-white {
+            background-color: #2d3748; /* Dunklere Kartenhintergründe */
+        }
+        .dark .text-gray-800 {
+            color: #e2e8f0;
+        }
+        .dark .text-gray-900 {
+            color: #e2e8f0;
+        }
+        .dark .text-gray-700 {
+            color: #cbd5e0;
+        }
+        .dark .text-gray-600 {
+            color: #a0aec0;
+        }
+        .dark .text-gray-500 {
+            color: #718096;
+        }
+        .dark .shadow-md {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.12);
+        }
+        .dark .bg-purple-100 {
+            background-color: #4a0e7e; /* Dunklere Kategorie-Badges */
+            color: #d6bcfa;
+        }
+        .dark .bg-white.category-button {
+            background-color: #4a5568;
+            color: #e2e8f0;
+        }
+        .dark .bg-white.category-button:hover {
+            background-color: #2d3748;
+        }
+        .dark #searchInput {
+            background-color: #2d3748;
+            color: #e2e8f0;
+        }
+        .dark #searchInput::placeholder {
+            color: #a0aec0;
+        }
+        .dark #searchInput + div svg {
+            color: #a0aec0;
+        }
+
+        /* Benutzerdefinierte Scrollbar für Webkit-Browser */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e0e0e0;
+            border-radius: 10px;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #4a5568;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #a0aec0;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        .dark ::-webkit-scrollbar-thumb:hover {
+            background: #cbd5e0;
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+    <div class="min-h-screen flex flex-col items-center py-10 px-4 sm:px-6 lg:px-8">
+        <!-- Header Sektion -->
+        <header class="w-full max-w-4xl text-center mb-12 relative">
+            <h1 class="text-5xl font-extrabold text-gray-900 mb-4 rounded-lg p-2">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-600">
+                    Die besten KI-Tools 2025
+                </span>
+            </h1>
+            <p class="text-xl text-gray-600">
+                Entdecke die besten KI-Tools für Kreativität, Produktivität und mehr.
+            </p>
+            <!-- Dark Mode Toggle -->
+            <button id="darkModeToggle" class="absolute top-0 right-0 p-3 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 shadow-md hover:bg-gray-300 dark:hover:bg-gray-600 transition duration-300 ease-in-out">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M3 12H2m15.325-4.575l.707-.707M6.025 18.575l-.707.707M18.575 6.025l.707-.707M5.425 17.975l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+                </svg>
+            </button>
+        </header>
+
+        <!-- Such- und Filtersektion -->
+        <div class="w-full max-w-4xl mb-8">
+            <div class="relative mb-4">
+                <input type="text" id="searchInput" placeholder="Suche nach Tools..."
+                       class="w-full p-4 pl-12 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-300 ease-in-out">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <svg class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="flex flex-wrap justify-center gap-3">
+                <button class="category-button bg-purple-500 text-white px-5 py-2 rounded-full shadow-md hover:bg-purple-600 transition duration-300 ease-in-out" data-category="Alle">Alle</button>
+                <button class="category-button bg-white text-gray-700 px-5 py-2 rounded-full shadow-md hover:bg-gray-100 transition duration-300 ease-in-out" data-category="Text">Text</button>
+                <button class="category-button bg-white text-gray-700 px-5 py-2 rounded-full shadow-md hover:bg-gray-100 transition duration-300 ease-in-out" data-category="Bild">Bild</button>
+                <button class="category-button bg-white text-gray-700 px-5 py-2 rounded-full shadow-md hover:bg-gray-100 transition duration-300 ease-in-out" data-category="Video">Video</button>
+                <button class="category-button bg-white text-gray-700 px-5 py-2 rounded-full shadow-md hover:bg-gray-100 transition duration-300 ease-in-out" data-category="Audio">Audio</button>
+                <button class="category-button bg-white text-gray-700 px-5 py-2 rounded-full shadow-md hover:bg-gray-100 transition duration-300 ease-in-out" data-category="Produktivität">Produktivität</button>
+                <button class="category-button bg-white text-gray-700 px-5 py-2 rounded-full shadow-md hover:bg-gray-100 transition duration-300 ease-in-out" data-category="Code">Code</button>
+            </div>
+        </div>
+
+        <!-- KI-Tools Liste -->
+        <div id="toolsList" class="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Tools werden hier dynamisch eingefügt -->
+        </div>
+
+        <!-- Footer Sektion -->
+        <footer class="w-full max-w-4xl text-center mt-12 text-gray-500 text-sm">
+            <p>&copy; 2025 best KI-Tools. Alle Rechte vorbehalten.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Array von KI-Tools
+        const aiTools = [
+            {
+                name: "ChatGPT",
+                category: "Text",
+                description: "Ein fortschrittlicher KI-Chatbot, der menschenähnlichen Text versteht und generiert.",
+                features: ["Konversationelle KI", "Inhaltserstellung", "Code-Generierung"],
+                pricing: "Freemium",
+                link: "https://chat.openai.com/",
+                image: "https://placehold.co/100x100/A78BFA/ffffff?text=GPT"
+            },
+            {
+                name: "Midjourney",
+                category: "Bild",
+                description: "KI-Kunstgenerator, der beeindruckende Bilder aus Textaufforderungen erstellt.",
+                features: ["Hochwertige Bildsynthese", "Vielfältige künstlerische Stile", "Community-Funktionen"],
+                pricing: "Bezahlt",
+                link: "https://www.midjourney.com/",
+                image: "https://placehold.co/100x100/8B5CF6/ffffff?text=MJ"
+            },
+            {
+                name: "Grammarly AI",
+                category: "Produktivität",
+                description: "KI-gestützter Schreibassistent zur Verbesserung von Grammatik, Rechtschreibung, Stil und Ton.",
+                features: ["Grammatik-/Rechtschreibprüfung", "Tonvorschläge", "Plagiatsprüfung"],
+                pricing: "Freemium",
+                link: "https://www.grammarly.com/",
+                image: "https://placehold.co/100x100/6D28D9/ffffff?text=GM"
+            },
+            {
+                name: "Synthesia",
+                category: "Video",
+                description: "Erstellt realistische KI-generierte Videos mit benutzerdefinierten Avataren und Stimmen aus Text.",
+                features: ["KI-Avatare", "Mehrsprachige Unterstützung", "Benutzerdefiniertes Branding"],
+                pricing: "Bezahlt",
+                link: "https://www.synthesia.io/",
+                image: "https://placehold.co/100x100/5B21B6/ffffff?text=SYN"
+            },
+            {
+                name: "Notion AI",
+                category: "Produktivität",
+                description: "Integriert KI-Funktionen direkt in Notion-Arbeitsbereiche zum Schreiben, Brainstorming und Zusammenfassen.",
+                features: ["Zusammenfassung", "Brainstorming", "Inhaltserstellung"],
+                pricing: "Freemium",
+                link: "https://www.notion.so/product/ai",
+                image: "https://placehold.co/100x100/4C1D95/ffffff?text=NTN"
+            },
+            {
+                name: "DALL-E 3",
+                category: "Bild",
+                description: "Ein weiteres leistungsstarkes KI-Modell zur Generierung von Bildern aus Textbeschreibungen.",
+                features: ["Realistische Bildgenerierung", "Vielseitige Stile", "Integration in ChatGPT Plus"],
+                pricing: "Bezahlt (über ChatGPT Plus)",
+                link: "https://openai.com/dall-e-3",
+                image: "https://placehold.co/100x100/3B0764/ffffff?text=DALL"
+            },
+            {
+                name: "GitHub Copilot",
+                category: "Code",
+                description: "KI-Paarprogrammierer, der Code-Vervollständigungen und -Vorschläge in Echtzeit bietet.",
+                features: ["Code-Vervollständigung", "Vorschläge für Funktionen", "Unterstützt viele Sprachen"],
+                pricing: "Bezahlt",
+                link: "https://github.com/features/copilot",
+                image: "https://placehold.co/100x100/2E1065/ffffff?text=CO"
+            },
+            {
+                name: "Descript",
+                category: "Audio",
+                description: "KI-gestützter Video- und Audio-Editor, der Bearbeitung so einfach wie Textbearbeitung macht.",
+                features: ["Textbasierte Bearbeitung", "Overdub (Stimmenklon)", "Entfernung von Füllwörtern"],
+                pricing: "Freemium",
+                link: "https://www.descript.com/",
+                image: "https://placehold.co/100x100/1D0A4F/ffffff?text=DES"
+            },
+            {
+                name: "Jasper AI",
+                category: "Text",
+                description: "KI-Assistent für Marketingtexte und Inhalte, der hochwertige Texte für verschiedene Zwecke generiert.",
+                features: ["Blog-Beiträge", "Marketingtexte", "Produktbeschreibungen"],
+                pricing: "Bezahlt",
+                link: "https://www.jasper.ai/",
+                image: "https://placehold.co/100x100/1A0A3D/ffffff?text=JAS"
+            },
+            {
+                name: "RunwayML",
+                category: "Video",
+                description: "Eine Suite von KI-Tools für die Videobearbeitung, einschließlich Text-zu-Video und Bild-zu-Video.",
+                features: ["Text-zu-Video", "Bild-zu-Video", "Green Screen-Effekte"],
+                pricing: "Freemium",
+                link: "https://runwayml.com/",
+                image: "https://placehold.co/100x100/0F042F/ffffff?text=RW"
+            },
+            {
+                name: "ElevenLabs",
+                category: "Audio",
+                description: "KI-Stimmgenerator, der extrem realistische Stimmen in verschiedenen Sprachen erzeugen kann.",
+                features: ["Realistische Stimmgenerierung", "Sprachklonung", "Mehrsprachig"],
+                pricing: "Freemium",
+                link: "https://elevenlabs.io/",
+                image: "https://placehold.co/100x100/05011A/ffffff?text=EL"
+            },
+            {
+                name: "Canva Magic Studio",
+                category: "Bild",
+                description: "Integrierte KI-Tools in Canva für Design, Bildgenerierung und Textbearbeitung.",
+                features: ["Text-zu-Bild", "Magische Bearbeitung", "Text-Rewriting"],
+                pricing: "Freemium",
+                link: "https://www.canva.com/magic-studio/",
+                image: "https://placehold.co/100x100/A78BFA/ffffff?text=CAN"
+            },
+            {
+                name: "Adobe Firefly",
+                category: "Bild",
+                description: "Generative KI-Modelle von Adobe für kreative Arbeitsabläufe, insbesondere Bild- und Texteffekte.",
+                features: ["Text-zu-Bild", "Generatives Füllen", "Texteffekte"],
+                pricing: "Freemium",
+                link: "https://www.adobe.com/sensei/generative-ai/firefly.html",
+                image: "https://placehold.co/100x100/8B5CF6/ffffff?text=AD"
+            },
+            {
+                name: "Bard (Google Gemini)",
+                category: "Text",
+                description: "Googles experimenteller Konversations-KI-Dienst, der auf dem Gemini-Modell basiert.",
+                features: ["Informationsabfrage", "Ideengenerierung", "Code-Unterstützung"],
+                pricing: "Kostenlos",
+                link: "https://bard.google.com/",
+                image: "https://placehold.co/100x100/6D28D9/ffffff?text=Bard"
+            },
+            {
+                name: "HeyGen",
+                category: "Video",
+                description: "Erstellt professionelle KI-Videos mit sprechenden Avataren und anpassbaren Vorlagen.",
+                features: ["KI-Avatare", "Text-zu-Sprache", "Hintergrundanpassung"],
+                pricing: "Freemium",
+                link: "https://www.heygen.com/",
+                image: "https://placehold.co/100x100/5B21B6/ffffff?text=HG"
+            },
+            {
+                name: "Perplexity AI",
+                category: "Produktivität",
+                description: "Eine Konversations-Suchmaschine, die Antworten mit Quellenangaben liefert.",
+                features: ["Quellenangaben", "Konversationssuche", "Zusammenfassungen"],
+                pricing: "Freemium",
+                link: "https://www.perplexity.ai/",
+                image: "https://placehold.co/100x100/4C1D95/ffffff?text=PX"
+            },
+            {
+                name: "Tabnine",
+                category: "Code",
+                description: "KI-Code-Vervollständigung, die Entwicklern hilft, schneller und präziser zu codieren.",
+                features: ["Code-Vervollständigung", "Kontextbezogene Vorschläge", "Unterstützt viele IDEs"],
+                pricing: "Freemium",
+                link: "https://www.tabnine.com/",
+                image: "https://placehold.co/100x100/3B0764/ffffff?text=TN"
+            },
+            {
+                name: "Murf.ai",
+                category: "Audio",
+                description: "KI-Sprachgenerator mit einer Vielzahl von lebensechten Stimmen und Sprachen.",
+                features: ["Text-zu-Sprache", "Stimmstile", "Hintergrundmusik"],
+                pricing: "Freemium",
+                link: "https://murf.ai/",
+                image: "https://placehold.co/100x100/2E1065/ffffff?text=MRF"
+            },
+            {
+                name: "Copy.ai",
+                category: "Text",
+                description: "KI-Texter, der Marketingtexte, Blog-Inhalte und mehr in wenigen Minuten generiert.",
+                features: ["Marketingtexte", "Blog-Ideen", "Social Media Inhalte"],
+                pricing: "Freemium",
+                link: "https://www.copy.ai/",
+                image: "https://placehold.co/100x100/1D0A4F/ffffff?text=CPY"
+            },
+            {
+                name: "DeepMotion",
+                category: "Video",
+                description: "KI-Tool zur Generierung von 3D-Animationen aus 2D-Videos oder Bildern.",
+                features: ["Motion Capture", "3D-Animation", "Charakter-Rigging"],
+                pricing: "Freemium",
+                link: "https://www.deepmotion.com/",
+                image: "https://placehold.co/100x100/1A0A3D/ffffff?text=DM"
+            }
+            // Füge hier weitere 80+ Tools hinzu, um auf 100 zu kommen
+        ];
+
+        const toolsListDiv = document.getElementById('toolsList');
+        const searchInput = document.getElementById('searchInput');
+        const categoryButtons = document.querySelectorAll('.category-button');
+        const darkModeToggle = document.getElementById('darkModeToggle'); // Dark Mode Toggle Element
+
+        // Funktion zum Rendern der Tools
+        function renderTools(toolsToRender) {
+            toolsListDiv.innerHTML = ''; // Vorhandene Tools leeren
+            if (toolsToRender.length === 0) {
+                toolsListDiv.innerHTML = '<p class="text-center text-gray-500 col-span-full">Keine Tools gefunden, die den Kriterien entsprechen.</p>';
+                return;
+            }
+            toolsToRender.forEach(tool => {
+                const toolCard = `
+                    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transform hover:scale-105 transition duration-300 ease-in-out">
+                        <div class="flex items-center mb-4">
+                            <img src="${tool.image}" alt="${tool.name} Logo" class="w-16 h-16 rounded-full mr-4 shadow-md">
+                            <div>
+                                <h2 class="text-2xl font-bold text-gray-900">${tool.name}</h2>
+                                <span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full mt-1">${tool.category}</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-4 flex-grow">${tool.description}</p>
+                        <div class="mb-4">
+                            <h3 class="font-semibold text-gray-800 mb-2">Merkmale:</h3>
+                            <ul class="list-disc list-inside text-gray-600">
+                                ${tool.features.map(feature => `<li>${feature}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div class="flex justify-between items-center mt-auto pt-4 border-t border-gray-100">
+                            <span class="text-sm font-medium text-gray-500">Preis: ${tool.pricing}</span>
+                            <a href="${tool.link}" target="_blank" rel="noopener noreferrer"
+                               class="bg-indigo-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-indigo-600 transition duration-300 ease-in-out shadow-md">
+                                Besuchen
+                            </a>
+                        </div>
+                    </div>
+                `;
+                toolsListDiv.innerHTML += toolCard;
+            });
+        }
+
+        // Funktion zum Filtern und Suchen der Tools
+        function filterTools() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const activeCategoryButton = document.querySelector('.category-button.bg-purple-500');
+            const selectedCategory = activeCategoryButton ? activeCategoryButton.dataset.category : 'Alle';
+
+            const filtered = aiTools.filter(tool => {
+                const matchesSearch = tool.name.toLowerCase().includes(searchTerm) ||
+                                      tool.description.toLowerCase().includes(searchTerm) ||
+                                      tool.features.some(feature => feature.toLowerCase().includes(searchTerm));
+                const matchesCategory = selectedCategory === 'Alle' || tool.category === selectedCategory;
+                return matchesSearch && matchesCategory;
+            });
+            renderTools(filtered);
+        }
+
+        // Funktion zum Umschalten des Dark Mode
+        function toggleDarkMode() {
+            const htmlElement = document.documentElement;
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+            updateDarkModeToggleIcon();
+        }
+
+        // Funktion zum Aktualisieren des Dark Mode Toggle Icons
+        function updateDarkModeToggleIcon() {
+            const htmlElement = document.documentElement;
+            const iconPath = darkModeToggle.querySelector('path');
+            if (htmlElement.classList.contains('dark')) {
+                // Moon icon for dark mode
+                iconPath.setAttribute('d', 'M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z');
+            } else {
+                // Sun icon for light mode
+                iconPath.setAttribute('d', 'M12 3v1m0 16v1m9-9h1M3 12H2m15.325-4.575l.707-.707M6.025 18.575l-.707.707M18.575 6.025l.707-.707M5.425 17.975l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z');
+            }
+        }
+
+        // Event Listener für die Suche
+        searchInput.addEventListener('keyup', filterTools);
+
+        // Event Listener für die Kategorie-Buttons
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Aktiven Button zurücksetzen
+                categoryButtons.forEach(btn => {
+                    btn.classList.remove('bg-purple-500', 'text-white');
+                    btn.classList.add('bg-white', 'text-gray-700');
+                });
+                // Neuen aktiven Button setzen
+                button.classList.remove('bg-white', 'text-gray-700');
+                button.classList.add('bg-purple-500', 'text-white');
+                filterTools();
+            });
+        });
+
+        // Event Listener für den Dark Mode Toggle
+        darkModeToggle.addEventListener('click', toggleDarkMode);
+
+        // Initiales Rendern der Tools und Anwenden des gespeicherten Themas
+        document.addEventListener('DOMContentLoaded', () => {
+            // Überprüfe gespeichertes Thema im localStorage
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
+            updateDarkModeToggleIcon(); // Icon beim Laden aktualisieren
+            renderTools(aiTools);
+        });
+    </script>
+</body>
+</html>
